@@ -1,8 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="planes.js"></script>
 <script>
 var cost = 0;
+var currentPlane = 0;
+
+//https://github.com/coolaj86/knuth-shuffle
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
+shuffle(planes);
+document.getElementById('name').innerHTML = planes[currentPlane].name;
+document.getElementById('plane').innerHTML = planes[currentPlane].plane;
+document.getElementById('ruletext').innerHTML = planes[currentPlane].ruletext;
 
 function OnClickDice() {
 	var result = Math.floor(Math.random() * 6);
@@ -30,6 +57,16 @@ function OnClickNewPlayer()
 
 function Planechase() {
 	document.getElementById('dice').innerHTML = "Planechase";
+	currentPlane++;
+	if (currentPlane >= planes.length)
+	{
+		shuffle(planes);
+		currentPlane = 0;
+	}
+	document.getElementById('name').innerHTML = planes[currentPlane].name;
+	document.getElementById('plane').innerHTML = planes[currentPlane].plane;
+	document.getElementById('ruletext').innerHTML = planes[currentPlane].ruletext;
+	document.getElementById('chaos').innerHTML = planes[currentPlane].chaos;
 }
 
 function Chaos() {
@@ -42,7 +79,10 @@ function Nothing() {
 </script>
 </head>
 <body>
-<h1 id="plane">Hello Plane</h1>
+<h1 id="name">Hello Region</h1>
+<h2 id="plane">Hello Plane</h2>
+<p id="ruletext">Plane text placeholder.</p>
+<p id="chaos">Chaos text placeholder.</p>
 <button type="button"
 onclick="OnClickDice()">Pay <span id="cost">0</span>: Roll a dice.
 </button>
@@ -50,7 +90,5 @@ onclick="OnClickDice()">Pay <span id="cost">0</span>: Roll a dice.
 <button type="button"
 onclick="OnClickNewPlayer()">End turn.
 </button>
-<p id="planetext">Plane text placeholder.</p>
-<p id="chaostext">Chaos text placeholder.</p>
 </body>
 </html>
