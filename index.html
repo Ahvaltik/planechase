@@ -1,7 +1,56 @@
 <!DOCTYPE html>
 <html>
+<head>
+<script>
+var cost = 0;
+
+function OnClickDice() {
+	var result = Math.floor(Math.random() * 6);
+	if (result == 0)
+	{
+		Planechase();
+	}
+	else if (result == 1)
+	{
+		Chaos();
+	}
+    else
+	{
+		Nothing();
+	}
+	cost += 1;
+	document.getElementById('cost').innerHTML = cost;
+}
+
+function OnClickNewPlayer()
+{
+	cost = 0;
+	document.getElementById('cost').innerHTML = cost;
+}
+
+function Planechase() {
+	document.getElementById('dice').innerHTML = "Planechase";
+}
+
+function Chaos() {
+	document.getElementById('dice').innerHTML = "Chaos";
+}
+
+function Nothing() {
+	document.getElementById('dice').innerHTML = "Nothing";
+}
+</script>
+</head>
 <body>
-<h1>Hello Plane</h1>
-<p>Beginning of planechase app.</p>
+<h1 id="plane">Hello Plane</h1>
+<button type="button"
+onclick="OnClickDice()">Pay <span id="cost">0</span>: Roll a dice.
+</button>
+<p id="dice"></p>
+<button type="button"
+onclick="OnClickNewPlayer()">End turn.
+</button>
+<p id="planetext">Plane text placeholder.</p>
+<p id="chaostext">Chaos text placeholder.</p>
 </body>
 </html>
