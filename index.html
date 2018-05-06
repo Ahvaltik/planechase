@@ -1,94 +1,91 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<script src="planes.js"></script>
-<script>
-var cost = 0;
-var currentPlane = 0;
+	<script src="./planes.js"></script>
+	<script>
+		var cost = 0;
+		var currentPlane = 0;
 
-//https://github.com/coolaj86/knuth-shuffle
-function shuffle(array) {
-  var currentIndex = array.length, temporaryValue, randomIndex;
+		//https://github.com/coolaj86/knuth-shuffle
+		function shuffle(array) {
+			var currentIndex = array.length, temporaryValue, randomIndex;
 
-  // While there remain elements to shuffle...
-  while (0 !== currentIndex) {
+			// While there remain elements to shuffle...
+			while (0 !== currentIndex) {
 
-    // Pick a remaining element...
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
+				// Pick a remaining element...
+				randomIndex = Math.floor(Math.random() * currentIndex);
+				currentIndex -= 1;
 
-    // And swap it with the current element.
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
-  }
+				// And swap it with the current element.
+				temporaryValue = array[currentIndex];
+				array[currentIndex] = array[randomIndex];
+				array[randomIndex] = temporaryValue;
+			}
 
-  return array;
-}
+			return array;
+		}
 
-shuffle(planes);
-document.getElementById('name').innerHTML = planes[currentPlane].name;
-document.getElementById('plane').innerHTML = planes[currentPlane].plane;
-document.getElementById('ruletext').innerHTML = planes[currentPlane].ruletext;
-
-function OnClickDice() {
-	var result = Math.floor(Math.random() * 6);
-	if (result == 0)
-	{
-		Planechase();
-	}
-	else if (result == 1)
-	{
-		Chaos();
-	}
-    else
-	{
-		Nothing();
-	}
-	cost += 1;
-	document.getElementById('cost').innerHTML = cost;
-}
-
-function OnClickNewPlayer()
-{
-	cost = 0;
-	document.getElementById('cost').innerHTML = cost;
-}
-
-function Planechase() {
-	document.getElementById('dice').innerHTML = "Planechase";
-	currentPlane++;
-	if (currentPlane >= planes.length)
-	{
 		shuffle(planes);
-		currentPlane = 0;
-	}
-	document.getElementById('name').innerHTML = planes[currentPlane].name;
-	document.getElementById('plane').innerHTML = planes[currentPlane].plane;
-	document.getElementById('ruletext').innerHTML = planes[currentPlane].ruletext;
-	document.getElementById('chaos').innerHTML = planes[currentPlane].chaos;
-}
+		document.getElementById('name').innerHTML = planes[currentPlane].name;
+		document.getElementById('plane').innerHTML = planes[currentPlane].plane;
+		document.getElementById('ruletext').innerHTML = planes[currentPlane].ruletext;
 
-function Chaos() {
-	document.getElementById('dice').innerHTML = "Chaos";
-}
+		function OnClickDice() {
+			var result = Math.floor(Math.random() * 6);
+			if (result == 0) {
+				Planechase();
+			}
+			else if (result == 1) {
+				Chaos();
+			}
+			else {
+				Nothing();
+			}
+			cost += 1;
+			document.getElementById('cost').innerHTML = cost;
+		}
 
-function Nothing() {
-	document.getElementById('dice').innerHTML = "Nothing";
-}
-</script>
+		function OnClickNewPlayer() {
+			cost = 0;
+			document.getElementById('cost').innerHTML = cost;
+		}
+
+		function Planechase() {
+			document.getElementById('dice').innerHTML = "Planechase";
+			currentPlane++;
+			if (currentPlane >= planes.length) {
+				shuffle(planes);
+				currentPlane = 0;
+			}
+			document.getElementById('name').innerHTML = planes[currentPlane].name;
+			document.getElementById('plane').innerHTML = planes[currentPlane].plane;
+			document.getElementById('ruletext').innerHTML = planes[currentPlane].ruletext;
+			document.getElementById('chaos').innerHTML = planes[currentPlane].chaos;
+		}
+
+		function Chaos() {
+			document.getElementById('dice').innerHTML = "Chaos";
+		}
+
+		function Nothing() {
+			document.getElementById('dice').innerHTML = "Nothing";
+		}
+	</script>
 </head>
+
 <body>
-<h1 id="name">Hello Region</h1>
-<h2 id="plane">Hello Plane</h2>
-<p id="ruletext">Plane text placeholder.</p>
-<p id="chaos">Chaos text placeholder.</p>
-<button type="button"
-onclick="OnClickDice()">Pay <span id="cost">0</span>: Roll a dice.
-</button>
-<p id="dice"></p>
-<button type="button"
-onclick="OnClickNewPlayer()">End turn.
-</button>
+	<h1 id="name">Hello Region</h1>
+	<h2 id="plane">Hello Plane</h2>
+	<p id="ruletext">Plane text placeholder.</p>
+	<p id="chaos">Chaos text placeholder.</p>
+	<button type="button" onclick="OnClickDice()">Pay
+		<span id="cost">0</span>: Roll a dice.
+	</button>
+	<p id="dice"></p>
+	<button type="button" onclick="OnClickNewPlayer()">End turn.
+	</button>
 </body>
+
 </html>
