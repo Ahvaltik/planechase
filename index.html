@@ -27,10 +27,13 @@
 			return array;
 		}
 
-		shuffle(planes);
-		document.getElementById('name').innerHTML = planes[currentPlane].name;
-		document.getElementById('plane').innerHTML = planes[currentPlane].plane;
-		document.getElementById('ruletext').innerHTML = planes[currentPlane].ruletext;
+		function OnLoadDocument() {
+			shuffle(planes);
+			document.getElementById('name').innerHTML = planes[currentPlane].name;
+			document.getElementById('plane').innerHTML = planes[currentPlane].plane;
+			document.getElementById('ruletext').innerHTML = planes[currentPlane].ruletext;
+			document.getElementById('chaos').innerHTML = planes[currentPlane].chaos;
+		}
 
 		function OnClickDice() {
 			var result = Math.floor(Math.random() * 6);
@@ -75,7 +78,7 @@
 	</script>
 </head>
 
-<body>
+<body onload="OnLoadDocument()">
 	<h1 id="name">Hello Region</h1>
 	<h2 id="plane">Hello Plane</h2>
 	<p id="ruletext">Plane text placeholder.</p>
@@ -83,9 +86,13 @@
 	<button type="button" onclick="OnClickDice()">Pay
 		<span id="cost">0</span>: Roll a dice.
 	</button>
-	<p id="dice"></p>
 	<button type="button" onclick="OnClickNewPlayer()">End turn.
 	</button>
+	<button type="button" onclick="Planechase()">Next plane.
+	</button>
+	<p>Result -
+		<span id="dice"></span>
+	</p>
 </body>
 
 </html>
