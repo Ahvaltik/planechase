@@ -2,6 +2,99 @@
 <html>
 
 <head>
+	<style>
+		body {
+			background-color: #2a4d2e;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-position: center center;
+			background-size: 100% 100%;
+		}
+
+		#planepane {
+			position: absolute;
+			bottom: 10px;
+			left: 25%;
+			width: 50%;
+			height: 40%;
+			float: left;
+			font: 17px Georgia, serif;
+			text-align: center;
+			color: #ffffff;
+			text-decoration: none;
+			border: #868686c9;
+			border-radius: 16px;
+			background-color: #3a3939c9;
+		}
+
+		h1 {
+			font-size: 200%;
+		}
+
+		h2 {
+			font-size: 150%;
+			font-style: italic;
+		}
+
+		#credit {
+			font-size: 75%;
+		}
+
+		#controls {
+			position: absolute;
+			bottom: 60px;
+			left: 5%;
+			width: 90%;
+			text-align: center;
+		}
+
+		#result {
+			position: absolute;
+			bottom: 10px;
+			left: 5%;
+			width: 90%;
+			text-align: center;
+		}
+
+		#manacost {
+			display: inline-block;
+			width: 17px;
+			font: 95% times;
+			font-style: bold;
+			color: #000000;
+			text-align: center;
+			text-shadow: 0 1px 3px 0 #0000009d;
+			background-color: #8d8d8d;
+			box-shadow: 0 1px 2px 0 #0000009d;
+			border-radius: 50%;
+		}
+
+		.button {
+			bottom: 0;
+			width: 30%;
+			height: 35px;
+			float: auto;
+			font: 17px Georgia, serif;
+			color: #ffffff;
+			text-align: center;
+			border-color: #868686c9;
+			border-radius: 3px;
+			background-color: #3a3939c9;
+		}
+
+		.button:hover {
+			background-color: #6d6d6d
+		}
+
+		.button:active {
+			background-color: #a0a0a0;
+			transform: translateY(2px);
+		}
+
+		img {
+			vertical-align: middle;
+		}
+	</style>
 	<script src="./planes.js"></script>
 	<script>
 		var cost = 0;
@@ -27,12 +120,62 @@
 			return array;
 		}
 
+		function MagicSymbolSource(name, size = 'small') {
+			return "http://gatherer.wizards.com/Handlers/Image.ashx?size=" + size + "&name=" + name + "&type=symbol";
+		}
+
+		function ReplaceMagicSymbols(text) {
+			return text.replace(/\[[^\]]*\]/g, function (x) {
+				return '<img src="' + MagicSymbolSource(x.replace(/[\[\]]/g, '')) + '" />';
+			});
+		}
+
+		function SetPlane(plane) {
+			document.getElementById('name').innerHTML = plane.name;
+			document.getElementById('plane').innerHTML = "Plane - " + plane.plane;
+			document.getElementById('ruletext').innerHTML = ReplaceMagicSymbols(plane.ruletext);
+			document.getElementById('chaos').innerHTML = ReplaceMagicSymbols(plane.chaos);
+			if (plane.imgsrc != "") {
+				document.body.style.backgroundImage = "url('" + plane.imgsrc + "')";
+			}
+			else {
+				document.body.style.backgroundImage = "none";
+			}
+			if (plane.imgauthor != "") {
+				document.getElementById('credit').innerHTML = "Art by " + plane.imgauthor;
+			}
+			else {
+				document.getElementById('credit').innerHTML = "";
+			}
+		}
+
 		function OnLoadDocument() {
 			shuffle(planes);
-			document.getElementById('name').innerHTML = planes[currentPlane].name;
-			document.getElementById('plane').innerHTML = planes[currentPlane].plane;
-			document.getElementById('ruletext').innerHTML = planes[currentPlane].ruletext;
-			document.getElementById('chaos').innerHTML = planes[currentPlane].chaos;
+			SetPlane(planes[currentPlane]);
+			document.getElementById('cost').innerHTML = CostSource(cost);
+		}
+
+		function CostSource(number) {
+			// if (number <= 16) {
+			// 	return '<img src="' + MagicSymbolSource(number.toString()) + '" />';
+			// }
+			return '<span id="manacost">' + number.toString() + "</span>";
+			/*
+			var tempnum = number;
+			var result = "";
+			while (tempnum > 100) {
+				result += '<img src="' + MagicSymbolSource(100) + '" />';
+				tempnum -= 100;
+			}
+			while (tempnum > 10) {
+				result += '<img src="' + MagicSymbolSource(10) + '" />';
+				tempnum -= 10;
+			}
+			if (tempnum > 0) {
+				result += '<img src="' + MagicSymbolSource(tempnum.toString()) + '" />';
+			}
+			return result;
+			*/
 		}
 
 		function OnClickDice() {
@@ -47,12 +190,12 @@
 				Nothing();
 			}
 			cost += 1;
-			document.getElementById('cost').innerHTML = cost;
+			document.getElementById('cost').innerHTML = CostSource(cost);
 		}
 
 		function OnClickNewPlayer() {
 			cost = 0;
-			document.getElementById('cost').innerHTML = cost;
+			document.getElementById('cost').innerHTML = CostSource(cost);
 		}
 
 		function Planechase() {
@@ -62,10 +205,7 @@
 				shuffle(planes);
 				currentPlane = 0;
 			}
-			document.getElementById('name').innerHTML = planes[currentPlane].name;
-			document.getElementById('plane').innerHTML = planes[currentPlane].plane;
-			document.getElementById('ruletext').innerHTML = planes[currentPlane].ruletext;
-			document.getElementById('chaos').innerHTML = planes[currentPlane].chaos;
+			SetPlane(planes[currentPlane]);
 		}
 
 		function Chaos() {
@@ -79,20 +219,29 @@
 </head>
 
 <body onload="OnLoadDocument()">
-	<h1 id="name">Hello Region</h1>
-	<h2 id="plane">Hello Plane</h2>
-	<p id="ruletext">Plane text placeholder.</p>
-	<p id="chaos">Chaos text placeholder.</p>
-	<button type="button" onclick="OnClickDice()">Pay
-		<span id="cost">0</span>: Roll a dice.
-	</button>
-	<button type="button" onclick="OnClickNewPlayer()">End turn.
-	</button>
-	<button type="button" onclick="Planechase()">Next plane.
-	</button>
-	<p>Result -
-		<span id="dice"></span>
-	</p>
+	<div id="planepane">
+		<div id="planetext">
+			<h1 id="name"></h1>
+			<h2 id="plane"></h2>
+			<p id="ruletext"></p>
+			<p id="chaos"></p>
+			<p id="credit"></p>
+		</div>
+		<div id="controls">
+			<button type="button" class="button" onclick="OnClickDice()">Pay
+				<span id="cost"></span>: Roll a dice.
+			</button>
+			<button type="button" class="button" onclick="OnClickNewPlayer()">End turn.
+			</button>
+			<button type="button" class="button" onclick="Planechase()">Next plane.
+			</button>
+		</div>
+		<div id="result">
+			<p>Result -
+				<span id="dice"></span>
+			</p>
+		</div>
+	</div>
 </body>
 
 </html>
