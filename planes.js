@@ -19,24 +19,24 @@ var planes = [{
     plane: "Zendikar",
     ruletext: "Players may cast enchantment spells as though they had flash.",
     chaos: "Whenever you roll [chaos], destroy target creature that isn\'t enchanted.",
-    imgsrc: "",
-    imgauthor: ""
+    imgsrc: "http://www.mtgpics.com/pics/art/2pc/009.jpg",
+    imgauthor: "Rob Alexander"
 },
 {
     name: "Aretopolis",
     plane: "Kephalai",
     ruletext: "When you planeswalk to Aretopolis or at the beginning of your upkeep, put a scroll counter on Aretopolis, then you gain life equal to the number of scroll counters on it.</br>When Aretopolis has ten or more scroll counters on it, planeswalk.",
     chaos: "Whenever you roll [chaos], put a scroll counter on Aretopolis, then draw cards equal to the number of scroll counters on it.",
-    imgsrc: "",
-    imgauthor: ""
+    imgsrc: "http://www.mtgpics.com/pics/art/2pc/010.jpg",
+    imgauthor: "Christopher Moeller"
 },
 {
     name: "Astral Arena",
     plane: "Kolbahan",
     ruletext: "No more than one creature can attack each combat.</br>No more than one creature can block each combat.",
     chaos: "Whenever you roll [chaos], Astral Arena deals 2 damage to each creature.",
-    imgsrc: "",
-    imgauthor: ""
+    imgsrc: "http://www.mtgpics.com/pics/art/2pc/011.jpg",
+    imgauthor: "Sam Burley"
 },
 {
     name: "Bant",
@@ -51,8 +51,8 @@ var planes = [{
     plane: "Equilor",
     ruletext: "Whenever a creature enters the battlefield, it gains double strike and haste until end of turn.",
     chaos: "Whenever you roll [chaos], exile target nontoken creature you control, then return it to the battlefield under your control.",
-    imgsrc: "",
-    imgauthor: ""
+    imgsrc: "http://www.mtgpics.com/pics/art/2pc/012.jpg",
+    imgauthor: "Mark Hyzer"
 },
 {
     name: "Celestine Reef",
@@ -60,7 +60,7 @@ var planes = [{
     ruletext: "Creatures without flying or islandwalk can\'t attack.",
     chaos: "Whenever you roll [chaos], until a player planeswalks, you can\'t lose the game and your opponents can\'t win the game.",
     imgsrc: "",
-    imgauthor: ""
+    imgauthor: "Donato Giancola"
 },
 {
     name: "Cliffside Market",
@@ -75,8 +75,8 @@ var planes = [{
     plane: "Belenon",
     ruletext: "If a creature you control would untap during your untap step, put two +1/+1 counters on it instead.",
     chaos: "Whenever you roll [chaos], untap each creature you control.",
-    imgsrc: "",
-    imgauthor: ""
+    imgsrc: "http://www.mtgpics.com/pics/art/2pc/013.jpg",
+    imgauthor: "Goran Josic"
 },
 {
     name: "Eloren Wilds",
@@ -107,24 +107,24 @@ var planes = [{
     plane: "New Phyrexia",
     ruletext: "When you planeswalk to Furnace Layer or at the beginning of your upkeep, select target player at random. That player discards a card. If that player discards a land card this way, they lose 3 life.",
     chaos: "Whenever you roll [chaos], you may destroy target nonland permanent.",
-    imgsrc: "",
-    imgauthor: ""
+    imgsrc: "http://www.mtgpics.com/pics/art/2pc/014.jpg",
+    imgauthor: "Kekai Kotaki"
 },
 {
     name: "Gavony",
     plane: "Innistrad",
     ruletext: "All creatures have vigilance.",
     chaos: "Whenever you roll [chaos], creatures you control gain indestructible until end of turn.",
-    imgsrc: "",
-    imgauthor: ""
+    imgsrc: "http://www.mtgpics.com/pics/art/2pc/015.jpg",
+    imgauthor: "Dave Kendall"
 },
 {
     name: "Glen Elendra",
     plane: "Lorwyn",
     ruletext: "At end of combat, you may exchange control of target creature you control that dealt combat damage to a player this combat and target creature that player controls.",
     chaos: "Whenever you roll [chaos], gain control of target creature you own.",
-    imgsrc: "",
-    imgauthor: ""
+    imgsrc: "http://www.mtgpics.com/pics/art/2pc/016.jpg",
+    imgauthor: "Omar Rayyan"
 },
 {
     name: "Glimmervoid Basin",
@@ -147,8 +147,8 @@ var planes = [{
     plane: "Ravnica",
     ruletext: "Whenever a creature dies, its controller distributes a number of +1/+1 counters equal to its power among any number of target creatures they control.",
     chaos: "Whenever you roll [chaos], each player exiles all creatures they control and creates X 1/1 green Saproling creature tokens, where X is the total power of the creatures they exiled this way. Then planeswalk.",
-    imgsrc: "",
-    imgauthor: ""
+    imgsrc: "http://www.mtgpics.com/pics/art/2pc/017.jpg",
+    imgauthor: "Kekai Kotaki"
 },
 {
     name: "Grixis",
@@ -163,24 +163,24 @@ var planes = [{
     plane: "Fabacin",
     ruletext: "When you planeswalk to Grove of the Dreampods or at the beginning of your upkeep, reveal cards from the top of your library until you reveal a creature card. Put that card onto the battlefield and the rest on the bottom of your library in a random order.",
     chaos: "Whenever you roll [chaos], return target creature card from your graveyard to the battlefield.",
-    imgsrc: "",
-    imgauthor: ""
+    imgsrc: "http://www.mtgpics.com/pics/art/2pc/018.jpg",
+    imgauthor: "Erica Yang"
 },
 {
     name: "Hedron Fields of Agadeem",
     plane: "Zendikar",
     ruletext: "Creatures with power 7 or greater can\'t attack or block.",
     chaos: "Whenever you roll [chaos], create a 7/7 colorless Eldrazi creature token with annihilator 1. <i>(Whenever it attacks, defending player sacrifices a permanent.)</i>",
-    imgsrc: "",
-    imgauthor: ""
+    imgsrc: "http://www.mtgpics.com/pics/art/2pc/019.jpg",
+    imgauthor: "Vincent Proce"
 },
 {
     name: "Horizon Boughs",
     plane: "Pyrulea",
     ruletext: "All permanents untap during each player\'s untap step.",
     chaos: "Whenever you roll [chaos], you may search your library for up to three basic land cards, put them onto the battlefield tapped, then shuffle your library.",
-    imgsrc: "",
-    imgauthor: ""
+    imgsrc: "http://www.mtgpics.com/pics/art/pca/082.jpg",
+    imgauthor: "Jean-Sébastien Rossbach"
 },
 {
     name: "Immersturm",
@@ -211,32 +211,32 @@ var planes = [{
     plane: "Alara",
     ruletext: "Whenever a player casts a black, red, or green creature spell, it gains devour 5. <i>(As the creature enters the battlefield, its controller may sacrifice any number of creatures. The creature enters the battlefield with five times that many +1/+1 counters on it.)</i>",
     chaos: "Whenever you roll [chaos], create two 1/1 red Goblin creature tokens.",
-    imgsrc: "",
-    imgauthor: ""
+    imgsrc: "http://www.mtgpics.com/pics/art/2pc/020.jpg",
+    imgauthor: "Aleksi Briclot"
 },
 {
     name: "Kessig",
     plane: "Innistrad",
     ruletext: "Prevent all combat damage that would be dealt by non-Werewolf creatures.",
     chaos: "Whenever you roll [chaos], each creature you control gets +2/+2, gains trample, and becomes a Werewolf in addition to its other types until end of turn.",
-    imgsrc: "",
-    imgauthor: ""
+    imgsrc: "http://www.mtgpics.com/pics/art/2pc/021.jpg",
+    imgauthor: "Adam Paquette"
 },
 {
     name: "Kharasha Foothills",
     plane: "Mongseng",
     ruletext: "Whenever a creature you control attacks a player, for each other opponent, you may create a token that\'s a copy of that creature, tapped and attacking that opponent. Exile those tokens at the beginning of the next end step.",
     chaos: "Whenever you roll [chaos], you may sacrifice any number of creatures. If you do, Kharasha Foothills deals that much damage to target creature.",
-    imgsrc: "",
-    imgauthor: ""
+    imgsrc: "http://www.mtgpics.com/pics/art/2pc/022.jpg",
+    imgauthor: "Trevor Claxton"
 },
 {
     name: "Kilnspire District",
     plane: "Ravnica",
     ruletext: "When you planeswalk to Kilnspire District or at the beginning of your precombat main phase, put a charge counter on Kilnspire District, then add [R] for each charge counter on it.",
     chaos: "Whenever you roll [chaos], you may pay [X]. If you do, Kilnspire District deals X damage to any target.",
-    imgsrc: "",
-    imgauthor: ""
+    imgsrc: "http://www.mtgpics.com/pics/art/2pc/023.jpg",
+    imgauthor: "John Avon"
 },
 {
     name: "Krosa",
@@ -251,8 +251,8 @@ var planes = [{
     plane: "Azgol",
     ruletext: "At the beginning of your upkeep, sacrifice a creature. If you can\'t, planeswalk.",
     chaos: "Whenever you roll [chaos], any number of target players each create a 2/2 black Zombie creature token.",
-    imgsrc: "",
-    imgauthor: ""
+    imgsrc: "http://www.mtgpics.com/pics/art/2pc/024.jpg",
+    imgauthor: "Philip Straub"
 },
 {
     name: "Lethe Lake",
@@ -283,8 +283,8 @@ var planes = [{
     plane: "Karsus",
     ruletext: "Whenever a player casts a spell, that player flips a coin. If the player loses the flip, counter that spell.",
     chaos: "Whenever you roll [chaos], target player reveals the top card of their library. If it\'s a nonland card, you may cast it without paying its mana cost.",
-    imgsrc: "",
-    imgauthor: ""
+    imgsrc: "http://www.mtgpics.com/pics/art/pca/083.jpg",
+    imgauthor: "Chippy"
 },
 {
     name: "Mount Keralia",
@@ -292,8 +292,8 @@ var planes = [{
     ruletext: "At the beginning of your end step, put a pressure counter on Mount Keralia.",
     ruletext: "When you planeswalk away from Mount Keralia, it deals damage equal to the number of pressure counters on it to each creature and each planeswalker.",
     chaos: "Whenever you roll [chaos], prevent all damage that planes named Mount Keralia would deal this game to permanents you control.",
-    imgsrc: "",
-    imgauthor: ""
+    imgsrc: "http://www.mtgpics.com/pics/art/2pc/025.jpg",
+    imgauthor: "Franz Vohwinkel"
 },
 {
     name: "Murasa",
@@ -324,40 +324,40 @@ var planes = [{
     plane: "Innistrad",
     ruletext: "At the beginning of your end step, put the top seven cards of your library into your graveyard. Then return a card at random from your graveyard to your hand.",
     chaos: "Whenever you roll [chaos], return target card from your graveyard to your hand.",
-    imgsrc: "",
-    imgauthor: ""
+    imgsrc: "http://www.mtgpics.com/pics/art/2pc/026.jpg",
+    imgauthor: "Daniel Ljunggren"
 },
 {
     name: "Norn\'s Dominion",
     plane: "New Phyrexia",
     ruletext: "When you planeswalk away from Norn\'s Dominion, destroy each nonland permanent without a fate counter on it, then remove all fate counters from all permanents.",
     chaos: "Whenever you roll [chaos], you may put a fate counter on target permanent.",
-    imgsrc: "",
-    imgauthor: ""
+    imgsrc: "http://www.mtgpics.com/pics/art/2pc/027.jpg",
+    imgauthor: "Igor Kieryluk"
 },
 {
     name: "Onakke Catacomb",
     plane: "Shandalar",
     ruletext: "All creatures are black and have deathtouch.",
     chaos: "Whenever you roll [chaos], creatures you control get +1/+0 and gain first strike until end of turn.",
-    imgsrc: "",
-    imgauthor: ""
+    imgsrc: "http://www.mtgpics.com/pics/art/2pc/028.jpg",
+    imgauthor: "Nic Klein"
 },
 {
     name: "Orochi Colony",
     plane: "Kamigawa",
     ruletext: "Whenever a creature you control deals combat damage to a player, you may search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library.",
     chaos: "Whenever you roll [chaos], target creature can\'t be blocked this turn.",
-    imgsrc: "",
-    imgauthor: ""
+    imgsrc: "http://www.mtgpics.com/pics/art/2pc/029.jpg",
+    imgauthor: "Charles Urbach"
 },
 {
     name: "Orzhova",
     plane: "Ravnica",
     ruletext: "When you planeswalk away from Orzhova, each player returns all creature cards from their graveyard to the battlefield.",
     chaos: "Whenever you roll [chaos], for each opponent, exile up to one target creature card from that player\'s graveyard.",
-    imgsrc: "",
-    imgauthor: ""
+    imgsrc: "http://www.mtgpics.com/pics/art/2pc/030.jpg",
+    imgauthor: "Charles Urbach"
 },
 {
     name: "Otaria",
@@ -388,16 +388,16 @@ var planes = [{
     plane: "Ravnica",
     ruletext: "If you cast a spell this turn, you can\'t attack with creatures.</br>If you attacked with creatures this turn, you can\'t cast spells.",
     chaos: "Whenever you roll [chaos], you gain life equal to the number of cards in your hand.",
-    imgsrc: "",
-    imgauthor: ""
+    imgsrc: "http://www.mtgpics.com/pics/art/2pc/031.jpg",
+    imgauthor: "Drew Baker"
 },
 {
     name: "Quicksilver Sea",
     plane: "Mirrodin",
     ruletext: "When you planeswalk to Quicksilver Sea or at the beginning of your upkeep, scry 4. <i>(Look at the top four cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.)</i>",
     chaos: "Whenever you roll [chaos], reveal the top card of your library. You may play it without paying its mana cost.",
-    imgsrc: "",
-    imgauthor: ""
+    imgsrc: "http://www.mtgpics.com/pics/art/2pc/032.jpg",
+    imgauthor: "Charles Urbach"
 },
 {
     name: "Raven\'s Run",
@@ -428,8 +428,8 @@ var planes = [{
     plane: "Ravnica",
     ruletext: "If an effect would create one or more tokens, it creates twice that many of those tokens instead.</br>If an effect would put one or more counters on a permanent, it puts twice that many of those counters on that permanent instead.",
     chaos: "Whenever you roll [chaos], until end of turn, whenever you tap a land for mana, add one mana of any type that land produced.",
-    imgsrc: "",
-    imgauthor: ""
+    imgsrc: "http://www.mtgpics.com/pics/art/2pc/033.jpg",
+    imgauthor: "Martina Pilcerova"
 },
 {
     name: "Shiv",
@@ -460,16 +460,16 @@ var planes = [{
     plane: "Xerex",
     ruletext: "Players have no maximum hand size.</br>Whenever you roll the planar die, draw a card.",
     chaos: "Whenever you roll [chaos], reveal the top card of your planar deck. You may put it on the bottom of your planar deck.",
-    imgsrc: "",
-    imgauthor: ""
+    imgsrc: "http://www.mtgpics.com/pics/art/pca/084.jpg",
+    imgauthor: "Steven Belledin"
 },
 {
     name: "Stensia",
     plane: "Innistrad",
     ruletext: "Whenever a creature deals damage to one or more players for the first time each turn, put a +1/+1 counter on it.",
     chaos: "Whenever you roll [chaos], each creature you control gains \"[tap]: This creature deals 1 damage to target player or planeswalker\" until end of turn.",
-    imgsrc: "",
-    imgauthor: ""
+    imgsrc: "http://www.mtgpics.com/pics/art/2pc/034.jpg",
+    imgauthor: "Vincent Proce"
 },
 {
     name: "Stronghold Furnace",
@@ -484,8 +484,8 @@ var planes = [{
     plane: "Kamigawa",
     ruletext: "Whenever a creature leaves the battlefield, its controller draws a card.",
     chaos: "Whenever you roll [chaos], return target creature you control to its owner\'s hand.",
-    imgsrc: "",
-    imgauthor: ""
+    imgsrc: "http://www.mtgpics.com/pics/art/2pc/035.jpg",
+    imgauthor: "Cliff Childs"
 },
 {
     name: "Talon Gates",
@@ -493,7 +493,7 @@ var planes = [{
     ruletext: "Any time you could cast a sorcery, you may exile a nonland card from your hand with X time counters on it, where X is its converted mana cost. If the exiled card doesn\'t have suspend, it gains suspend. <i>(At the beginning of its owner\'s upkeep, they remove a time counter. When the last is removed, the player casts it without paying its mana cost. If it\'s a creature, it has haste.)</i>",
     chaos: "Whenever you roll [chaos], remove two time counters from each suspended card you own.",
     imgsrc: "",
-    imgauthor: ""
+    imgauthor: "Chippy"
 },
 {
     name: "Tazeem",
@@ -508,8 +508,8 @@ var planes = [{
     plane: "Kinshala",
     ruletext: "Whenever a player taps a land for mana, Tember City deals 1 damage to that player.",
     chaos: "Whenever you roll [chaos], each other player sacrifices a nonland permanent.",
-    imgsrc: "",
-    imgauthor: ""
+    imgsrc: "http://www.mtgpics.com/pics/art/pca/086.jpg",
+    imgauthor: "Ben Thompson"
 },
 {
     name: "The Æther Flues <i>(The Aether Flues)</i>",
@@ -573,24 +573,24 @@ var planes = [{
     ruletext: "Creatures with flying get +2/+0.",
     ruletext: "Creatures without flying get -2/-0.",
     chaos: "Whenever you roll [chaos], target creature gains flying until end of turn.",
-    imgsrc: "",
-    imgauthor: ""
+    imgsrc: "http://www.mtgpics.com/pics/art/2pc/040.jpg",
+    imgauthor: "rk post"
 },
 {
     name: "Trail of the Mage-Rings",
     plane: "Vryn",
     ruletext: "Instant and sorcery spells have rebound. <i>(The spell\'s controller exiles the spell as it resolves if they cast it from their hand. At the beginning of that player\'s next upkeep, they may cast that card from exile without paying its mana cost.)</i>",
     chaos: "Whenever you roll [chaos], you may search your library for an instant or sorcery card, reveal it, put it into your hand, then shuffle your library.",
-    imgsrc: "",
-    imgauthor: ""
+    imgsrc: "http://www.mtgpics.com/pics/art/2pc/037.jpg",
+    imgauthor: "Vincent Proce"
 },
 {
     name: "Truga Jungle",
     plane: "Ergamon",
     ruletext: "All lands have \"[tap]: Add one mana of any color.\"",
     chaos: "Whenever you roll [chaos], reveal the top three cards of your library. Put all land cards revealed this way into your hand and the rest on the bottom of your library in any order.",
-    imgsrc: "",
-    imgauthor: ""
+    imgsrc: "http://www.mtgpics.com/pics/art/2pc/038.jpg",
+    imgauthor: "Jim Nelson"
 },
 {
     name: "Turri Island",
@@ -621,6 +621,6 @@ var planes = [{
     plane: "Belenon",
     ruletext: "Players play with the top card of their libraries revealed.</br>You may play the top card of any player\'s library.",
     chaos: "Whenever you roll [chaos], each player puts the top card of their library into their graveyard.",
-    imgsrc: "",
-    imgauthor: ""
+    imgsrc: "http://www.mtgpics.com/pics/art/2pc/039.jpg",
+    imgauthor: "Kekai Kotaki"
 }];
